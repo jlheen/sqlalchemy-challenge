@@ -1,3 +1,13 @@
+## This is to continue my research on which Hawaiian 
+# destination I'll be visiting.
+## I'll be creating a Flask app for easy searches 
+# of the database that will return in JSON format.
+## These will include a landing page, a page for 
+# precipitation data, stations, and best of all
+# a place to query the minimum, maximum, and average temperature data
+# with a given start or end date.
+
+
 import numpy as np
 
 import sqlalchemy
