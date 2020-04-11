@@ -10,7 +10,7 @@ from flask import Flask, jsonify
 #################################################
 # Database Setup
 #################################################
-engine = create_engine("sqlite:///Resources/hawaii.sqlite")
+engine = create_engine("sqlite:///hawaii.sqlite")
 
 # reflect an existing database into a new model
 Base = automap_base()
@@ -73,7 +73,6 @@ def stations():
 @app.route("/api/v1.0/tobs")
 def tobs():
     """Query the dates and temperature observations of the most active station for the last year of data.
-    Return a JSON list of temperature observations (TOBS) for the previous year.
     Returns: a JSON file of date:tobs for the latest year of tobs data (2016-08-23 to 2017-08-23) for the most active station id(USC00519281)"""
     sel = [measurement.date, measurement.tobs]
     latest_year_tobs = session.query(*sel).\
